@@ -142,3 +142,10 @@ hash -r
 command -v spark-submit
 
 spark-submit   --conf spark.executor.instances=4   --conf spark.executor.cores=2   --conf spark.executor.memory=4g   code/prDFQ4_log.py   --base-path hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/dsml00293
+
+deactivate 2>/dev/null || true
+source ~/bigdata-env.sh
+hash -r
+command -v spark-submit
+
+spark-submit   --conf spark.executor.instances=3   --conf spark.executor.cores=1   --conf spark.executor.memory=2g   code/prDFQ3_hint.py   --base-path hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/dsml00293
